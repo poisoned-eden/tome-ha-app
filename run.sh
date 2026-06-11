@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "--- BOOTING NEW SCRIPT V0.1.5 ---"
+echo "--- BOOTING NEW SCRIPT V0.1.6 ---"
 
 export TOME_LIBRARY_DIR="/share/tome/books"
 export TOME_INCOMING_DIR="/share/tome/bindery"
@@ -22,8 +22,8 @@ fi
 
 # --------------------------------------
 
-echo "Symlinks created and environment configured. Handing over to Tome..."
+echo "Environment configured. Handing over to Tome..."
 
 cd /app
 
-exec "$@"
+exec uvicorn backend.main:app --host 0.0.0.0 --port 8080
