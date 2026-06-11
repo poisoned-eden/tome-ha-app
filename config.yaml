@@ -1,6 +1,6 @@
 name: "Tome for Home Assistant"
 description: "A self-hosted ebook library server that knows how you read -- not just what you own.  As a Home Assistant App."
-version: "0.1.0"
+version: "0.1.1"
 slug: "tome_for_ha"
 init: false
 arch:
