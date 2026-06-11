@@ -1,14 +1,11 @@
 #!/bin/bash
-echo "echo "--- BOOTING NEW SCRIPT V0.1.4 ---""
+echo "--- BOOTING NEW SCRIPT V0.1.5 ---"
 
 export TOME_LIBRARY_DIR="/share/tome/books"
 export TOME_INCOMING_DIR="/share/tome/bindery"
 
 mkdir -p /share/tome/books
 mkdir -p /share/tome/bindery
-
-mount --bind /share/tome/books /books
-mount --bind /share/tome/bindery /bindery
 
 if [ -f /data/options.json ]; then
   echo "Reading configuration from Home Assistant..."
