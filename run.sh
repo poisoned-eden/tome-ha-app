@@ -1,5 +1,8 @@
 #!/bin/bash
-echo "Starting Tome Add-on Initialization..."
+echo "echo "--- BOOTING NEW SCRIPT V0.1.4 ---""
+
+export TOME_LIBRARY_DIR="/share/tome/books"
+export TOME_INCOMING_DIR="/share/tome/bindery"
 
 mkdir -p /share/tome/books
 mkdir -p /share/tome/bindery
@@ -26,4 +29,4 @@ echo "Symlinks created and environment configured. Handing over to Tome..."
 
 cd /app
 
-exec uvicorn app.main:app --host 0.0.0.0 --port 8080
+exec "$@"
