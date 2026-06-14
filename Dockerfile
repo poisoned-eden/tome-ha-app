@@ -1,6 +1,8 @@
 FROM ghcr.io/bndct-devops/tome:latest
 
-RUN apk add --no-cache jq
+USER root
+
+RUN apt-get update && apt-get install -y jq
 
 COPY run.sh /
 RUN chmod a+x /run.sh
